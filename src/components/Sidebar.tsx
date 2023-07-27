@@ -59,5 +59,5 @@ export default Sidebar;
 
 export const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: BarChart },
-  { name: "Data", href: "/data", icon: User },
+  { name: "Data", href: "/userData", icon: User },
 ];

@@ -3,7 +3,6 @@ import React from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
 import UserDataItemCard from "@/components/UserDataItemCard";
-import { useRouter } from "next/router";
 import Button from "@/components/Button";
 
 const DataView = () => {
@@ -21,7 +20,6 @@ const DataView = () => {
     return response.data;
   };
   const { data } = useQuery(["FORM_DATA"], fetchData);
-  setDataEntries(data);
 
   const compareDataEntries = (dataEntry1: any, dataEntry2: any) => {
     const percentage1 = dataEntry1.percentage;
@@ -62,9 +60,9 @@ const DataView = () => {
         </div>
       </div>
       <div>
-        {data.map((info: any, index: number) => {
+        {data?.map((info: any, index: number) => {
           return (
-            <div key={index}>
+            <div key={index} className="my-4">
               <UserDataItemCard
                 company={info.company}
                 numUsers={info.numUsers}
