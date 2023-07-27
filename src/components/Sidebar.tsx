@@ -59,7 +59,5 @@ export default Sidebar;
 
 export const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: BarChart },
-  { name: "Users", href: "/users", icon: User },
-  { name: "Profile", href: "/profile", icon: File },
-  { name: "Settings", href: "/settings", icon: Settings },
+  { name: "Data", href: "/data", icon: User },
 ];

@@ -9,8 +9,6 @@ import Button from "@/components/Button";
 const DataView = () => {
   const [dataEntries, setDataEntries] = React.useState([]);
 
-  const router = useRouter();
-
   const fetchData = async () => {
     const response = await axios.get(
       "https://takehome-backend.onrender.com/api/data",
