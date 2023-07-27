@@ -26,8 +26,9 @@ export default function Home() {
       return response.data;
     },
     {
-      onSuccess: () => {
+      onSuccess: (res) => {
         router.push("/dashboard");
+        localStorage.setItem('userData', JSON.stringify(res))
       },
       onError: (err) => {
         console.log(err);

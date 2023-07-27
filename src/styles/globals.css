@@ -78,7 +78,7 @@
     }
   
     .badge-success {
-      @apply bg-primary-light;
+      @apply bg-green-200;
     }
   
     .badge-success-icon {
@@ -86,12 +86,9 @@
     }
   
     .badge-danger {
-      @apply bg-error-light;
+      @apply bg-red-200;
     }
   
-    .badge-danger-icon {
-      @apply bg-error-main p-0.5;
-    }
   
     .badge-tertiary {
       @apply bg-gray-100;
