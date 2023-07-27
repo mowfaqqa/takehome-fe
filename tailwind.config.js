@@ -17,7 +17,7 @@ module.exports = {
           main: "#2f2f2f",
         },
         secondary: {
-          main: "@ffa438",
+          main: "#ffa438",
         },
       },
     },

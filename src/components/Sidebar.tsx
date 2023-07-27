@@ -36,12 +36,12 @@ const Sidebar = () => {
                   className={classNames(
                     router.asPath === item.href
                       ? "bg-primary-main text-white"
-                      : "text-gray-900 hover:bg-primary-light",
+                      : "text-primary-main hover:bg-gray-400 hover:text-white",
                     "group flex items-center my-4 px-2 py-2 text-sm font-medium rounded-md"
                   )}
                 >
                   <item.icon
-                    className="mr-3 h-6 w-6 text-gray-900"
+                    className="mr-3 h-6 w-6 text-gray-900 "
                     aria-hidden="true"
                   />
                   {item.name}

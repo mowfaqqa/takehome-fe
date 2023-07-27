@@ -14,11 +14,11 @@
     }
   
     .button-primary:hover {
-      @apply bg-primary-dark;
+      @apply bg-gray-500;
     }
   
     .button-primary:focus {
-      @apply ring ring-offset-0 ring-primary-dark;
+      @apply ring ring-offset-0 ring-gray-500;
     }
   
     .button-primary:active {
