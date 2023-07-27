@@ -11,7 +11,7 @@ interface INAVIGATION_ITEM {
 
 const Sidebar = () => {
   const router = useRouter();
-  
+
   const classNames = (...classes: any) => {
     return classes.filter(Boolean).join(" ");
   };
@@ -41,7 +41,7 @@ const Sidebar = () => {
                   )}
                 >
                   <item.icon
-                    className="mr-3 h-6 w-6 text-gray-900 "
+                    className="mr-3 h-6 w-6 text-secondary-main "
                     aria-hidden="true"
                   />
                   {item.name}
