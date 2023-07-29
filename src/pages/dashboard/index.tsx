@@ -33,8 +33,8 @@ const Dashboard = () => {
     },
     {
       onSuccess: (res) => {
-        console.log(res);
-        notifySuccess(res.message ?? "FormSUbmitted successfully");
+
+        notifySuccess(res.message ?? "Form submitted successfully");
       },
       onError: () => {
         notifyError("An Error occured while submitting Form");

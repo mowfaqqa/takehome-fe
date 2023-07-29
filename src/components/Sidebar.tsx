@@ -12,10 +12,8 @@ interface INAVIGATION_ITEM {
 
 const Sidebar = () => {
   const router = useRouter();
-  const user = JSON.parse(Cookies.get("userData")!);
+  const userEmail = Cookies.get("userEmail")!;
 
-  const userEmail = user?.userRecord.email;
-  console.log(userEmail);
   const classNames = (...classes: any) => {
     return classes.filter(Boolean).join(" ");
   };

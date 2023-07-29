@@ -31,7 +31,7 @@ export default function Home() {
       onSuccess: (res) => {
         router.push("/dashboard");
         notifySuccess("Authentication Successful");
-        Cookies.set("userData", JSON.stringify(res));
+        Cookies.set("userEmail", res.userRecord.email);
       },
       onError: (err) => {
         notifyError("Authentication failed");
@@ -45,7 +45,6 @@ export default function Home() {
     },
     validationSchema: LOGIN_SCHEMA,
     onSubmit: (values) => {
-      console.log(values);
       handlelogin.mutate(values);
     },
   });

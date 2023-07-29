@@ -17,7 +17,6 @@ const DataView = () => {
         },
       }
     );
-    setDataEntries(response.data);
     return response.data;
   };
   const { data } = useQuery(["FORM_DATA"], fetchData);
