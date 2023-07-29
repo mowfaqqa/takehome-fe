@@ -1,9 +1,10 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Image from "next/image";
-import { BarChart, File, Settings, User } from "react-feather";
+import { BarChart, User } from "react-feather";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Cookies from "js-cookie";
 
 interface INAVIGATION_ITEM {
   [x: string]: any;
@@ -11,7 +12,7 @@ interface INAVIGATION_ITEM {
 
 const Sidebar = () => {
   const router = useRouter();
-  const user = JSON.parse(localStorage.getItem("userData")!);
+  const user = JSON.parse(Cookies.get("userData")!);
 
   const userEmail = user?.userRecord.email;
   console.log(userEmail);

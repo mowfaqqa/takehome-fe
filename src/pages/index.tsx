@@ -9,6 +9,7 @@ import axios from "axios";
 import { useMutation } from "react-query";
 import { useRouter } from "next/router";
 import { notifyError, notifySuccess } from "@/lib/notification";
+import Cookies from "js-cookie";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ export default function Home() {
       onSuccess: (res) => {
         router.push("/dashboard");
         notifySuccess("Authentication Successful");
-        localStorage.setItem("userData", JSON.stringify(res));
+        Cookies.set("userData", JSON.stringify(res));
       },
       onError: (err) => {
         notifyError("Authentication failed");
