@@ -8,6 +8,7 @@ import { LOGIN_SCHEMA } from "@/lib/schema/authSchema";
 import axios from "axios";
 import { useMutation } from "react-query";
 import { useRouter } from "next/router";
+import { notifyError, notifySuccess } from "@/lib/notification";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,10 +29,11 @@ export default function Home() {
     {
       onSuccess: (res) => {
         router.push("/dashboard");
-        localStorage.setItem('userData', JSON.stringify(res))
+        notifySuccess("Authentication Successful");
+        localStorage.setItem("userData", JSON.stringify(res));
       },
       onError: (err) => {
-        console.log(err);
+        notifyError("Authentication failed");
       },
     }
   );
@@ -47,7 +49,7 @@ export default function Home() {
     },
   });
   return (
-    <div className="max-w-4xl mx-auto mt-14">
+    <div className="max-w-4xl mx-auto mt-14 px-6">
       <div className="  bg-gray-50 ">
         <div className="text-center">
           <h2 className="text-3xl font-semibold text-gray-900">Login</h2>

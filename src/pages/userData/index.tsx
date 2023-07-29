@@ -17,6 +17,7 @@ const DataView = () => {
         },
       }
     );
+    setDataEntries(response.data);
     return response.data;
   };
   const { data } = useQuery(["FORM_DATA"], fetchData);
@@ -45,11 +46,11 @@ const DataView = () => {
   return (
     <div>
       <div className="flex justify-between">
-        <div>
-          <h2 className="text-2xl font-semibold">Drivers</h2>
-          <span className="text-sm">View Drivers</span>
+        <div className="mt-3">
+          <h2 className="text-2xl font-semibold">Form Data</h2>
+          <span className="text-sm">View Form Data entries</span>
         </div>
-        <div>
+        <div className="mt-3">
           <Button
             variant="primary"
             onClick={handleCompareButtonClick}
@@ -60,6 +61,12 @@ const DataView = () => {
         </div>
       </div>
       <div>
+        <div className="text-lg grid grid-cols-4 font-semibold border-b border-gray-400 mt-4">
+          <span>Company</span>
+          <span>Number of Users</span>
+          <span>Number of Products</span>
+          <span>Percentage</span>
+        </div>
         {data?.map((info: any, index: number) => {
           return (
             <div key={index} className="my-4">
